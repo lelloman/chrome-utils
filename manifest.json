@@ -10,6 +10,10 @@
     {
       "matches": ["https://www.ilmattino.it/*"],
       "js": ["ilmattino.js"]
+    },
+    {
+      "matches": ["https://*.repubblica.it/*"],
+      "js": ["repubblica.js"]
     }
   ]
 }
