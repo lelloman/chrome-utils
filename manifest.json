@@ -1,0 +1,15 @@
+{
+  "name": "Chrome utilities",
+  "version": "1.0",
+  "description": "Remove some paywalls",
+  "manifest_version": 2,
+  "permissions": [
+      "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.ilmattino.it/*"],
+      "js": ["ilmattino.js"]
+    }
+  ]
+}
