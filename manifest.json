@@ -18,6 +18,10 @@
     {
       "matches": ["https://*.imslp.org/*"],
       "js": ["imslp.js"]
+    },
+    {
+      "matches": ["https://*.corriereadriatico.it/*"],
+      "js": ["corriereadriatico.js"]
     }
   ]
 }
