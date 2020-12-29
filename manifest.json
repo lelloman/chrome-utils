@@ -3,6 +3,12 @@
   "version": "1.0",
   "description": "Remove some paywalls",
   "manifest_version": 2,
+  "browser_action": {
+  	"default_title": "Make this page red"
+  },
+  "icons": {
+  	"128": "icon_128.png"
+  },
   "background": {
   	"scripts": ["background.js"]
   },
