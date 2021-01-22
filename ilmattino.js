@@ -1,6 +1,6 @@
 (function() {
 	const removePaywall = function() {
-		var element = document.getElementById("paywall_wrapper");
+		var element = document.getElementById("datawall");
 		if(element != undefined) {
 		element.parentNode.removeChild(element);
 		document.body.style = "";
