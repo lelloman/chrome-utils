@@ -12,5 +12,10 @@ setTimeout(function() {
     paywall.removeAttribute("subscriptions-section");
     paywall.parentNode.removeChild(paywall.parentNode.children[0]);
   }
+  const paywallContainers = document.getElementsByClassName("fc-ab-root")
+  for(let i in paywallContainers) {
+    paywallContainers[i].remove();
+    document.getElementById("detail").style = "";
+  }
 }, 2000);
 })()

@@ -1,6 +1,9 @@
 (function() {
 	const removePaywall = function() {
 		var element = document.getElementById("datawall");
+		if(element == undefined) {
+			element = document.getElementById("paywall_wrapper");
+		}
 		if(element != undefined) {
 		element.parentNode.removeChild(element);
 		document.body.style = "";
@@ -14,3 +17,5 @@
 
 	observer.observe(document.body, config);
 })();
+
+
