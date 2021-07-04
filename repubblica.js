@@ -12,10 +12,29 @@ setTimeout(function() {
     paywall.removeAttribute("subscriptions-section");
     paywall.parentNode.removeChild(paywall.parentNode.children[0]);
   }
-  const paywallContainers = document.getElementsByClassName("fc-ab-root")
-  for(let i in paywallContainers) {
-    paywallContainers[i].remove();
-    document.getElementById("detail").style = "";
-  }
-}, 2000);
+  
+  try {
+	  const paywallContainers = document.getElementsByClassName("fc-ab-root")
+	  for(let i in paywallContainers) {
+	    paywallContainers[i].remove();
+	    document.getElementById("detail").style = "";
+	  }
+  } catch {}
+ 
+  const callback = function() {
+  	removeHiddenOverflow();
+  }   
+  const observer = new MutationObserver(callback); 
+  
+  const config = { attributes: true };
+  const body = document.getElementsByTagName("body")[0];
+  
+  const removeHiddenOverflow = function() {  	
+  	observer.disconnect();
+  	document.getElementsByTagName("body")[0].style = "";
+  	observer.observe(body, config);
+  };
+  observer.observe(body, config);
+  removeHiddenOverflow();
+}, 4000);
 })()
