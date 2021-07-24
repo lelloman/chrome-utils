@@ -32,6 +32,10 @@
     {
       "matches": ["https://*.corriereadriatico.it/*"],
       "js": ["corriereadriatico.js"]
+    },
+    {
+      "matches": ["https://*.ilmeteo.it/*"],
+      "js": ["ilmeteo.js"]
     }
   ]
 }
