@@ -40,6 +40,10 @@
     {
       "matches": ["https://*.corriere.it/*"],
       "js": ["corriere.js"]
+    },
+    {
+      "matches": ["https://*.lastampa.it/*"],
+      "js": ["lastampa.js"]
     }
   ]
 }

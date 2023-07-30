@@ -9,13 +9,19 @@
 		document.body.style = "";
 		}
   	}
-  	var observer = new MutationObserver(function(mutations) {
+	const removeBlur = function() {
+		var element = document.getElementById("ppstyle");
+		if (element != undefined) {
+			element.parentNode.removeChild(element);
+		}
+	}
+  	var paywallObserver = new MutationObserver(function(mutations) {
 	    removePaywall();
+	    removeBlur();
 	});
 	
-	var config = { attributes: false, childList: true, characterData: false }
-
-	observer.observe(document.body, config);
+	var config = { attributes: true, childList: true, characterData: true };
+	paywallObserver.observe(document.body, config);
 })();
 
 
