@@ -2,15 +2,16 @@
   "name": "Chrome utilities",
   "version": "1.0",
   "description": "Remove some paywalls",
-  "manifest_version": 2,
-  "browser_action": {
-  	"default_title": "Make this page red"
+  "manifest_version": 3,
+  "action": {
+  	"default_title": "Remove some paywalls"
   },
   "icons": {
   	"128": "icon_128.png"
   },
   "background": {
-  	"scripts": ["background.js"]
+    "service_worker": "background.js",
+    "type": "module"
   },
   "permissions": [
       "activeTab",
